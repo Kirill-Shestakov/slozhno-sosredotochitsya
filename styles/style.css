@@ -2,5 +2,232 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font);
+  background-color: var(--background-color);
 }
 
+.header {
+  display: grid;
+  justify-content: end;
+  justify-items: end;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: min-content min-content 1fr;
+  background-image: url("../images/cover-image-dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  justify-self: start;
+}
+
+.decorated-zone::before {
+  content: "";
+  inline-size: 25px;
+  block-size: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+
+.decorated-element_text {
+  position: absolute;
+  inset-inline-end: 20px;
+}
+
+.decorated-element_text::after {
+  content: "";
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  inset: 0;
+  box-shadow: 0px 0px 4px var(--accent-color);
+}
+
+.decorated-element_text::before {
+  content: "REC";
+  color: var(--accent-color, #ff0070);
+  line-height: 24px;
+  padding-right: 10px;
+}
+
+.header__theme-menu {
+  padding-top: 40px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.header__theme-menu-item {
+
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  padding: 3px 13px;
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 18px; /* 100% */
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  display: block;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: #DB00FF;
+  text-shadow: 4px 4px 0px var(--accent-color);
+  font-style: normal;
+  line-height: 82.5%; /* 95.7px */
+  padding-top: 70px;
+  padding-bottom: 55px;
+  
+}
+
+.title_accent {
+  margin-left: 2px;
+}
+
+.title {
+  min-inline-size: 355px;
+  min-block-size: 117px;
+  font-size: 18px;
+  line-height: 23.4px; /* 130% */
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px;
+  }
+
+  .decorated-element_text {
+    inset-inline-end: 30px;
+  }
+
+  .header__theme-menu {
+    padding-top: 145px;
+  }
+
+
+  .header__title {
+    place-self: start;
+    padding-bottom: 160px;
+    padding-top: 180px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .title {
+    place-self: end;
+    inline-size: 364px;
+    margin-bottom: 140px;
+
+  }
+
+}
+
+@media (width >= 1024px) {
+  .header {
+    padding: 20px;
+  }
+
+  .decorated-zone {
+    position: relative;
+
+  }
+  
+  .decorated-zone::after {
+    position: absolute;
+    place-self: end left;
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+  }
+  
+  .decorated-zone::before {
+    position: absolute;
+    inset-inline-end: 20px;
+    inset-block-start: 20px;
+    
+
+  }
+
+  .decorated-element_text {
+    inset-block-start: 20px;
+  }
+  
+
+  .header__theme-menu {
+    padding-top: 0;
+    place-self: center;
+    grid-row-start: 1;
+    
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__title {
+    place-self: start;
+    padding-bottom: 116px;
+    padding-top: 274px;
+  }
+
+  .title {
+    place-self: end;
+    min-inline-size: 491px;
+    min-block-size: 71px;
+    margin-bottom: 112px;
+  }
+}
+
+.main_section {
+  margin: 40px 10px;
+}
+
+.main_title {
+  color: var(--accent-color);
+  font-size: 18px;
+  line-height: 23.4px; /* 130% */
+  padding-bottom: 20px;
+}
+
+.main_subtitle {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 23.4px; /* 130% */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.main_text {
+  color: var(--main-text-color);
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+  padding-bottom: 20px;
+}
