@@ -113,7 +113,6 @@
 }
 
 .header_subtitle {
-  block-size: 117px;
   font-family: var(--main-font);
   line-height: 23.4px; /* 130% */
   font-weight: 700;
@@ -191,10 +190,6 @@
     place-self: start;
   }
 
-  .header_subtitle {
-    inline-size: 491px;
-    block-size: 71px;
-  }
 }
 
 /*Main*/
