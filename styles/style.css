@@ -114,6 +114,7 @@
 
 .header_subtitle {
   block-size: 117px;
+  font-family: var(--main-font);
   line-height: 23.4px; /* 130% */
   font-weight: 700;
   background-color: var(--accent-color);
