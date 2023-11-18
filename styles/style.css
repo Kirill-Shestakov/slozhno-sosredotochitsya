@@ -176,7 +176,9 @@
 
 .main_container-gallery {
   display: grid;
+  grid-template-columns: 354.999px;
   justify-content: center;
+  gap: 10px;
 }
 
 .main_text {
@@ -191,12 +193,6 @@
 
 .main_article:last-of-type .main_text {
   padding-block-end: 0px;
-}
-
-.main_container-gallery {
-  display: grid;
-  grid-template-columns: 354.999px;
-  gap: 10px;
 }
 
 .main_img {
